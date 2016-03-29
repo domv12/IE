@@ -10,6 +10,12 @@
 				templateUrl : 'resources/views/pages/home.html',
 				controller  : 'mainController'
 			})
+			
+			// route for the catalog page
+			.when('/catalog', {
+				templateUrl : 'resources/views/pages/catalog.html',
+				controller  : 'catalogController'
+			})
 
 			// route for the about page
 			.when('/about', {
@@ -30,6 +36,10 @@
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
+	scotchApp.controller('catalogController', function($scope) {
+		$scope.message = 'I am an catalog page.';
+	});
+	
 	scotchApp.controller('aboutController', function($scope) {
 		$scope.message = 'Look! I am an about page.';
 	});
